@@ -11,6 +11,14 @@ const cardFields = [
     fields: [{ name: 'alt', type: 'string', title: 'Alt Text' }],
   },
   {
+    name: 'mobileImage',
+    title: 'Mobile Image',
+    type: 'image',
+    options: { hotspot: true },
+    validation: (rule: Rule) => rule.required(),
+    fields: [{ name: 'alt', type: 'string', title: 'Alt Text' }],
+  },
+  {
     name: 'heading',
     title: 'Heading',
     type: 'string',
