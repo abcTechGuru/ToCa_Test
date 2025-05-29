@@ -56,7 +56,6 @@ type HomeHeroSection = BaseSection & {
   heroContentSteakhouse: string;
 };
 
-export type Section = HomeHeroSection;
 
 export type IntroSection = BaseSection & {
   _type: 'introSection';
@@ -72,3 +71,18 @@ export type Card = {
   subtext?: string;
   buttonText: string;
 };
+
+export type CocktailCard = {
+  title: string;
+  image: SanityImage;
+};
+
+export type CocktailSection = BaseSection & {
+  _type: 'cocktailSection';
+  title: string;
+  mainText: string;
+  buttonText: string;
+  backgroundImage: SanityImage;
+  cocktails: CocktailCard[];
+};
+export type Section = HomeHeroSection;
