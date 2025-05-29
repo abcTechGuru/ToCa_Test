@@ -1,6 +1,5 @@
 'use client';
 
-import { cn } from '@/libs/functions';
 import { ReactNode } from 'react';
 import DecorativeSeparator from './DecorativeSeparator';
 
