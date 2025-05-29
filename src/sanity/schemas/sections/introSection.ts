@@ -1,20 +1,20 @@
-import { defineType } from 'sanity';
+import { defineType, Rule } from 'sanity';
 
-// Shared card structure used in multiple fields below
+// Shared card structure used in multiple fields
 const cardFields = [
   {
     name: 'image',
     title: 'Image',
     type: 'image',
     options: { hotspot: true },
-    validation: (rule: { required: () => any }) => rule.required(),
+    validation: (rule: Rule) => rule.required(),
     fields: [{ name: 'alt', type: 'string', title: 'Alt Text' }],
   },
   {
     name: 'heading',
     title: 'Heading',
     type: 'string',
-    validation: (rule: { required: () => any }) => rule.required(),
+    validation: (rule: Rule) => rule.required(),
   },
   {
     name: 'subtext',
@@ -26,7 +26,7 @@ const cardFields = [
     name: 'buttonText',
     title: 'Button Text',
     type: 'string',
-    initialValue: 'Learn More', // Pre-fill button text to keep editing faster
+    initialValue: 'Learn More',
   },
 ];
 
@@ -40,21 +40,21 @@ export default defineType({
       title: 'Hero Card',
       type: 'object',
       fields: cardFields,
-      validation: (rule) => rule.required(), // Required to make the section meaningful
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'storyCard',
       title: 'Story Card',
       type: 'object',
       fields: cardFields,
-      validation: (rule) => rule.required(),
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'menuCard',
       title: 'Menu Card',
       type: 'object',
       fields: cardFields,
-      validation: (rule) => rule.required(),
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'experienceCards',
@@ -66,8 +66,8 @@ export default defineType({
           fields: cardFields,
         },
       ],
-      // Enforces exactly 3 cards for consistent layout/design usage
-      validation: (rule) => rule.min(3).max(3).error('Exactly 3 experience cards required'),
+      validation: (rule: Rule) =>
+        rule.min(3).max(3).error('Exactly 3 experience cards required'),
     },
   ],
 });

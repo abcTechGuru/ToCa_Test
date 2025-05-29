@@ -17,7 +17,7 @@ export default async function Header() {
   return (
     <header className='fixed inset-x-0 top-0 z-50 h-24 md:h-40'>
       <div className='relative z-20 h-full w-full'>
-        <Container className='h-full w-full'>
+        <Container className='h-full'>
           <div className='flex h-full items-center justify-between'>
             <div className='order-last flex flex-1 justify-end md:order-none md:justify-start'>
               <HeaderClientWrap>

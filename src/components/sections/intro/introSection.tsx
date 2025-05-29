@@ -40,7 +40,7 @@ export default function IntroSection({
           />
 
           {/* StoryCard and MenuCard side by side on second line */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-4">
             <SanityCard
               image={storyCard?.image}
               heading={storyCard?.heading}
@@ -57,7 +57,7 @@ export default function IntroSection({
               className=" w-full h-[640px] sm:h-[672px] flex-shrink-0 mx-auto"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-4">
             {experienceCards?.map((card, index) => (
               <SanityCard
                 key={index}

@@ -51,6 +51,24 @@ type BaseSection = {
 type HomeHeroSection = BaseSection & {
   _type: 'homeHeroSection';
   backgroundImage: SanityImage;
+  heroContentModern: string;
+  heroContentMexican: string;
+  heroContentSteakhouse: string;
 };
 
 export type Section = HomeHeroSection;
+
+export type IntroSection = BaseSection & {
+  _type: 'introSection';
+  heroCard: Card | null;
+  storyCard: Card | null;
+  menuCard: Card | null;
+  experienceCards: Card[];
+};
+
+export type Card = {
+  image: SanityImage;
+  heading: string;
+  subtext?: string;
+  buttonText: string;
+};
