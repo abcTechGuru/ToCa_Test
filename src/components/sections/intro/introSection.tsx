@@ -27,7 +27,7 @@ export default function IntroSection({
 }: IntroSectionProps) {
 
   return (
-    <section className="text-white -mt-[75px] sm:mt-0 py-0 sm:py-[240px]">
+    <section className="text-white -mt-[75px] sm:mt-0 pt-0 md:pt-[240px] pb-[0px] md:pb-[118px]">
       <Container className="">
         <div className="grid grid-cols-1 gap-4">
           {/* HeroCard - full width on first line */}

@@ -42,7 +42,7 @@ const cocktailSection = defineType({
       name: 'cocktails',
       type: 'array',
       title: 'Cocktail Cards',
-      validation: (rule) => rule.min(4).max(4),
+      validation: (rule) => rule.min(4).max(6),
       of: [
         {
           type: 'object',
