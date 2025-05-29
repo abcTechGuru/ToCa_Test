@@ -19,7 +19,7 @@ export default function HeroContentLine({ children, position }: HeroContentLineP
       {position === 'middle' && <DecorativeSeparator />}
       {position === 'middle' && content}
       {position === 'start' && content}
-      {position === 'start' && <DecorativeSeparator />}
+      {position === 'start' && <DecorativeSeparator className="mr-[15px]" />}
     </div>
   );
 }

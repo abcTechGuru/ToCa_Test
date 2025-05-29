@@ -13,7 +13,7 @@ type SanityCardProps = {
 export default function SanityCard({ image, heading, subtext, buttonText, className = '' }: SanityCardProps) {
   return (
     image && (
-      <div className={`relative rounded-lg overflow-hidden shadow-lg ${className}`}>
+      <div className={`relative rounded-lg overflow-hidden opacity-80 shadow-lg ${className}`}>
         <SanityImageBlock
           image={image}
           className="w-full h-full object-cover brightness-75"

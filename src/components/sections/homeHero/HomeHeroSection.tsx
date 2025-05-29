@@ -28,7 +28,6 @@ export default function HomeHeroSection({
           'flex flex-col items-center text-center',
           'px-4 sm:px-6 md:px-10 lg:px-0 w-full max-w-[1020px]',
           'text-white font-serif uppercase leading-[100%]',
-          'tracking-[0.1em]',
           '[font-variation-settings:"wght"400]',
           '[letter-spacing:clamp(4.885px,0.8vw,14px)]',
           '[font-size:clamp(48.853px,8vw,140px)]'

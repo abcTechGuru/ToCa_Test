@@ -25,7 +25,7 @@ export default function DecorativeSeparator({ lineWidth, className }: Decorative
 
       <div
         className="flex-grow border-t border-[#C5A288] opacity-50"
-        style={{ maxWidth: lineWidth ? `${lineWidth - 20}px` : undefined }}
+        style={{ maxWidth: lineWidth ? `${lineWidth - 35}px` : undefined }}
       />
 
       <svg
