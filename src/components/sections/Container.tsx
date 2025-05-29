@@ -12,7 +12,7 @@ export default function Container({ className = '', children, fluid = false }: C
       className={cn(
         fluid
           ? 'w-full' // full width, no max width or padding
-          : 'container mx-auto px-[0.62rem] md:px-6 lg:px-10', // default constrained container
+          : ' mx-auto px-[0.62rem] md:px-6 lg:px-10', // default constrained container
         className
       )}
     >
