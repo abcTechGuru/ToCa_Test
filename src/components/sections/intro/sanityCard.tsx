@@ -33,7 +33,7 @@ export default function SanityCard({
     return () => window.removeEventListener('resize', update);
   }, []);
 
-  const selectedImage = isMobile && mobileImage ? mobileImage : image;
+  const selectedImage = isMobile && mobileImage ? image : mobileImage;
 
   return (
     selectedImage && (
