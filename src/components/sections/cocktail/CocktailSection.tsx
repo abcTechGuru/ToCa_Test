@@ -26,7 +26,7 @@ export default function CocktailSection({
   cocktails,
 }: CocktailSectionProps) {
   return (
-    <section className="relative py-[85px] md:py-[30px] text-white overflow-hidden">
+    <section className="relative py-[85px] md:py-[0px] text-white overflow-hidden">
       <SanityImageBlock
         image={backgroundImage}
         className="absolute inset-0 w-full h-full object-cover mix-blend-overlay bg-[linear-gradient(0deg,rgba(255,255,255,0.01)_0%,rgba(255,255,255,0.01)_0%,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.5)_50%)]"
