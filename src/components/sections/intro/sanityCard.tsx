@@ -1,4 +1,4 @@
-import SanityImageBlock from '@/components/utility/SanityImageBlock';
+import SanityImageSkeleton from '@/components/utility/SanityImageSkeleton';
 import { SanityImage } from '@/sanity/types';
 import RoundedHoverButton from '@/components/RoundedHoverButton';
 import { useEffect, useState } from 'react';
@@ -34,7 +34,7 @@ export default function SanityCard({
   return (
     selectedImage && (
       <div className={`relative rounded-lg overflow-hidden opacity-80 shadow-lg ${className}`}>
-        <SanityImageBlock
+        <SanityImageSkeleton
           image={selectedImage}
           className="w-full h-full object-cover brightness-75"
         />
