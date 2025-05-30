@@ -1,4 +1,4 @@
-import RoundedHoverButton from '@/components/RoundedHoverButton';
+import RoundedHoverButton from '@/components/utility/RoundedHoverButton';
 
 export default function SectionHeader({
   title,
