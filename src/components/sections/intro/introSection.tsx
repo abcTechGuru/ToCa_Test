@@ -56,6 +56,7 @@ export default function IntroSection({
               subtext={menuCard?.subtext}
               buttonText={menuCard?.buttonText}
               className="w-full h-[640px] sm:h-[672px] flex-shrink-0 mx-auto"
+              variant="menu"
             />
           </div>
 

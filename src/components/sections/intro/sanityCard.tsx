@@ -2,6 +2,7 @@ import SanityImageSkeleton from '@/components/utility/SanityImageSkeleton';
 import { SanityImage } from '@/sanity/types';
 import RoundedHoverButton from '@/components/RoundedHoverButton';
 import { useEffect, useState } from 'react';
+import { cn } from '@/libs/functions';
 
 type SanityCardProps = {
   image?: SanityImage;
@@ -10,6 +11,8 @@ type SanityCardProps = {
   subtext?: string;
   buttonText?: string;
   className?: string;
+  variant?: 'menu' | 'default';
+
 };
 
 export default function SanityCard({
@@ -19,6 +22,7 @@ export default function SanityCard({
   subtext,
   buttonText,
   className = '',
+  variant = 'default',
 }: SanityCardProps) {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -50,7 +54,16 @@ export default function SanityCard({
           )}
 
           {buttonText && (
-            <RoundedHoverButton className="absolute bottom-[50px] sm:bottom-[80px] left-1/2 -translate-x-1/2 inline-flex justify-center items-center gap-2 rounded-full border border-white/50 bg-black/5 backdrop-blur-[10px] uppercase tracking-widest text-sm">
+            <RoundedHoverButton
+
+              className={cn(
+                `absolute bottom-[50px] sm:bottom-[80px] left-1/2 -translate-x-1/2
+                  inline-flex justify-center items-center gap-2
+                  rounded-full border border-white/50 bg-black/5 backdrop-blur-[10px]
+                  uppercase tracking-widest text-sm`,
+                variant === 'menu' && 'w-[180px] md:w-[200px]' // apply custom width for menu
+              )}
+            >
               {buttonText}
             </RoundedHoverButton>
           )}

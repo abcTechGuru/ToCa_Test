@@ -7,9 +7,15 @@ type Props = {
   children: React.ReactNode;
   onClick?: () => void;
   className?: string;
+  widthClassName?: string; // optional
 };
 
-export default function HoverIconButton({ children, onClick, className }: Props) {
+export default function HoverIconButton({
+  children,
+  onClick,
+  className,
+  widthClassName = 'w-[141px] md:w-[148px]', // default width
+}: Props) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -17,7 +23,7 @@ export default function HoverIconButton({ children, onClick, className }: Props)
       onClick={onClick}
       className={cn(
         `relative inline-flex items-center justify-center
-         w-[161px] h-[40px]
+         ${widthClassName} h-[40px]
          rounded-[60px] border border-white/50 
          font-sans text-[13px] font-normal tracking-[1.3px] uppercase text-white
          overflow-hidden transition-all duration-300
